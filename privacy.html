@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Hush</title>
+  <meta name="description" content="Hush privacy policy. Your diary data is encrypted on-device and never shared." />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .privacy-hero {
+      padding: calc(var(--nav-h) + 64px) 0 64px;
+      background: var(--cream-2);
+      border-bottom: 1px solid var(--border);
+    }
+    .privacy-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+    .privacy-hero p {
+      color: var(--ink-2);
+      font-size: 0.95rem;
+    }
+    .privacy-body {
+      padding: 72px 0 96px;
+    }
+    .privacy-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .privacy-content h2 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin: 2.5rem 0 0.75rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .privacy-content h2:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .privacy-content p {
+      font-size: 0.95rem;
+      color: var(--ink-2);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .privacy-content ul {
+      margin: 0.5rem 0 1rem 1.25rem;
+    }
+    .privacy-content ul li {
+      font-size: 0.95rem;
+      color: var(--ink-2);
+      line-height: 1.75;
+      margin-bottom: 0.4rem;
+    }
+    .privacy-content strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .privacy-highlight {
+      background: var(--sage-pale);
+      border-left: 3px solid var(--sage);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      margin: 2rem 0;
+    }
+    .privacy-highlight p {
+      margin: 0;
+      color: var(--sage-dark);
+      font-weight: 500;
+    }
+    [data-theme="dark"] .privacy-highlight p {
+      color: var(--sage-2);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--sage);
+      margin-bottom: 2rem;
+      transition: gap 0.2s;
+    }
+    .back-link:hover { gap: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav scrolled" role="navigation">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logo.jpg" alt="Hush logo" class="nav__logo-img" />
+      Hush
+    </a>
+    <div class="nav__right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <a href="index.html#download" class="btn btn--primary">Download APK</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="privacy-hero">
+  <div class="container">
+    <span class="eyebrow">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: April 2026 &nbsp;·&nbsp; Effective immediately</p>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="privacy-body">
+  <div class="container">
+    <div class="privacy-content">
+
+      <a href="index.html" class="back-link">
+        ← Back to Hush
+      </a>
+
+      <div class="privacy-highlight">
+        <p>
+          🔒 The short version: your private diary entries are AES-256-GCM encrypted on your device
+          and <strong>never transmitted to any server</strong>. We do not collect, sell, or share your personal writing.
+          Ever.
+        </p>
+      </div>
+
+      <h2>1. Who we are</h2>
+      <p>
+        Hush is a personal diary application for Android, built and maintained as an independent project.
+        This privacy policy explains what data the app collects, how it is used, and how it is protected.
+        By using Hush, you agree to the practices described here.
+      </p>
+
+      <h2>2. Private diary entries — fully on-device</h2>
+      <p>
+        All private diary entries you create in Hush are:
+      </p>
+      <ul>
+        <li><strong>Encrypted on your device</strong> using AES-256-GCM before being written to local storage</li>
+        <li><strong>Never uploaded, transmitted, or synced</strong> to any server — by design</li>
+        <li><strong>Only decryptable on your device</strong> using a key derived from your PIN/biometric</li>
+        <li>Completely inaccessible to us, even if we wanted to read them</li>
+      </ul>
+      <p>
+        This architecture is intentional. Your private thoughts are private — not as a policy choice,
+        but as a technical guarantee.
+      </p>
+
+      <h2>3. Shared notes — what goes to our servers</h2>
+      <p>
+        Hush includes an optional <strong>Shared Notes</strong> feature that allows you to co-edit notes
+        with other users in real time. This feature requires Google Sign-In and transmits data to our backend.
+        Specifically, when you use Shared Notes:
+      </p>
+      <ul>
+        <li>Your Google account name, email address, and profile photo URL are stored on our servers</li>
+        <li>The content of notes you explicitly share is stored in our database (PostgreSQL on Railway)</li>
+        <li>Invitations, collaborator relationships, and permissions are stored server-side</li>
+        <li>Real-time edits are transmitted over a secured WebSocket connection</li>
+      </ul>
+      <p>
+        <strong>Shared Notes are entirely opt-in.</strong> If you never use the Shared tab or sign in with Google,
+        no data of any kind leaves your device.
+      </p>
+
+      <h2>4. Authentication data</h2>
+      <p>
+        If you sign in with Google to use Shared Notes, we receive an ID token from Google which we
+        verify server-side. We store:
+      </p>
+      <ul>
+        <li>Your Google account ID (a numeric identifier, not your password)</li>
+        <li>Your email address</li>
+        <li>Your display name and profile photo URL (used to show your avatar to collaborators)</li>
+      </ul>
+      <p>
+        We do not store your Google password. Authentication is handled entirely through Google's
+        OAuth 2.0 infrastructure.
+      </p>
+
+      <h2>5. Local data storage</h2>
+      <p>
+        All private diary entries, journal structure, settings, and preferences are stored in a
+        local SQLite database on your device. This data:
+      </p>
+      <ul>
+        <li>Remains entirely on your device at all times</li>
+        <li>Is encrypted at rest using AES-256-GCM</li>
+        <li>Can be exported as an encrypted backup and imported on any device running Hush</li>
+        <li>Is deleted permanently when you uninstall the app</li>
+      </ul>
+
+      <h2>6. Analytics &amp; tracking</h2>
+      <p>
+        <strong>Hush contains no analytics, no crash reporting, no advertising SDKs, and no third-party
+        tracking of any kind.</strong> We do not use Firebase Analytics, Google Analytics, Mixpanel,
+        or any equivalent service. The app makes no network requests except:
+      </p>
+      <ul>
+        <li>Google Sign-In authentication (Shared Notes only, when you initiate it)</li>
+        <li>API calls to our backend for Shared Notes CRUD operations</li>
+        <li>WebSocket connections for real-time shared note collaboration</li>
+        <li>GIPHY API calls when you search for GIFs to embed in a note</li>
+      </ul>
+
+      <h2>7. Third-party services</h2>
+      <p>The following third-party services are used, under these limited conditions:</p>
+      <ul>
+        <li><strong>Google Sign-In</strong> — only when you authenticate for Shared Notes. Subject to Google's Privacy Policy.</li>
+        <li><strong>GIPHY</strong> — only when you search for GIFs within the editor. Your search query is sent to GIPHY's API. Subject to GIPHY's Privacy Policy.</li>
+        <li><strong>Railway (hosting)</strong> — our backend is hosted on Railway's infrastructure. Shared note data transits through Railway's servers.</li>
+      </ul>
+
+      <h2>8. Data retention</h2>
+      <ul>
+        <li><strong>Private diary data</strong>: stored only on your device; deleted when you uninstall</li>
+        <li><strong>Shared notes data</strong>: retained on our servers until you delete the note or your account</li>
+        <li><strong>Account data</strong>: retained until you request deletion</li>
+      </ul>
+      <p>
+        To request deletion of your account and all associated shared notes data, contact us at
+        the email address below. We will process deletion within 14 days.
+      </p>
+
+      <h2>9. Children's privacy</h2>
+      <p>
+        Hush is not directed at children under the age of 13. We do not knowingly collect personal
+        information from children under 13. If you believe a child has provided personal information
+        through Shared Notes, please contact us and we will delete it promptly.
+      </p>
+
+      <h2>10. Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Changes will be reflected by the
+        "Last updated" date at the top of this page. Continued use of the app after changes
+        constitutes acceptance of the updated policy.
+      </p>
+
+      <h2>11. Contact</h2>
+      <p>
+        If you have any questions about this Privacy Policy or your data, please open an issue on our
+        <a href="https://github.com/jjohnsamuel21/hush-personal-diary" target="_blank" rel="noopener"
+          style="color:var(--sage); text-decoration:underline;">GitHub repository</a>
+        or reach out via GitHub Discussions.
+      </p>
+
+      <div class="privacy-highlight" style="margin-top:3rem;">
+        <p>
+          Your diary is yours. We built Hush to be a tool that works <em>for</em> you, not a product
+          that extracts value <em>from</em> you. If you ever have a concern about your data, ask us directly.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__bottom" style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px;">
+      <p class="footer__copy">© 2026 Hush. All rights reserved.</p>
+      <p class="footer__note">
+        <a href="index.html" style="color:rgba(247,245,240,0.6); transition:color 0.2s;"
+           onmouseover="this.style.color='rgba(247,245,240,0.9)'"
+           onmouseout="this.style.color='rgba(247,245,240,0.6)'">← Back to home</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

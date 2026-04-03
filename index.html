@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hush — Your Private Diary</title>
+  <meta name="description" content="Hush is an offline-first personal diary with AES-256 encryption, rich text editing, voice notes, journals, and real-time shared notes. Free to download for Android." />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Hush — Your Private Diary" />
+  <meta property="og:description" content="Write freely. Think privately. Live fully. Offline-first, encrypted personal diary for Android." />
+  <meta property="og:image"       content="assets/ss_entries.jpg" />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon using app logo -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav__inner">
+    <a href="#" class="nav__logo" aria-label="Hush home">
+      <img src="assets/logo.jpg" alt="Hush logo" class="nav__logo-img" />
+      Hush
+    </a>
+
+    <ul class="nav__links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#journals">Journals</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+
+    <div class="nav__right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <!-- Moon -->
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <!-- Sun -->
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <a href="downloads/hush-v1.0.0.apk" class="btn btn--primary js-download" download>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+        Download APK
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero__blob"></div>
+  <div class="container hero__inner">
+
+    <!-- Text -->
+    <div class="hero__text">
+      <span class="eyebrow">✦ Personal Diary for Android</span>
+      <h1 class="hero__headline">
+        Write freely.<br>
+        Think privately.<br>
+        <em>Live fully.</em>
+      </h1>
+      <p class="hero__sub">
+        Hush is an offline-first personal diary that keeps your thoughts encrypted,
+        beautifully organised, and entirely yours — no subscription, no cloud, no compromise.
+      </p>
+      <div class="hero__actions">
+        <a href="downloads/hush-v1.0.0.apk" class="btn btn--primary btn--large js-download" download>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+          Download Free — Android
+        </a>
+        <a href="#features" class="btn btn--ghost btn--large">See Features</a>
+      </div>
+      <div class="hero__badges">
+        <span class="badge">🔒 AES-256 Encrypted</span>
+        <span class="badge">📴 Offline First</span>
+        <span class="badge">🆓 Completely Free</span>
+        <span class="badge">🤫 No Account Needed</span>
+      </div>
+    </div>
+
+    <!-- Phone mockup -->
+    <div class="hero__visual">
+      <div class="hero__phone-wrap">
+        <div class="phone phone--lg">
+          <div class="phone-screen">
+            <img src="assets/ss_entries.jpg" alt="Hush all entries screen — light mode" loading="eager" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     TRUST BAR
+════════════════════════════════════════════════════════════════ -->
+<div class="trust-bar">
+  <div class="trust-bar__inner">
+    <div class="trust-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Military-grade encryption
+    </div>
+    <div class="trust-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636a9 9 0 010 12.728M15.536 8.464a5 5 0 010 7.072M6.343 17.657a9 9 0 010-12.728M9.172 14.828a5 5 0 010-7.071"/></svg>
+      Works fully offline
+    </div>
+    <div class="trust-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z"/></svg>
+      5 typefaces &amp; page styles
+    </div>
+    <div class="trust-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 016 0v6a3 3 0 01-3 3z"/></svg>
+      Voice notes built-in
+    </div>
+    <div class="trust-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+      Real-time shared notes
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FEATURE PILLARS
+════════════════════════════════════════════════════════════════ -->
+<section class="pillars" id="features">
+  <div class="container">
+    <div class="pillars__header">
+      <span class="section-label">Why Hush</span>
+      <h2 class="section-title">Everything a diary should be</h2>
+      <p class="section-sub">Four pillars that make Hush the most thoughtful journaling app you've ever used.</p>
+    </div>
+
+    <div class="pillars__grid">
+      <div class="pillar-card fade-up">
+        <div class="pillar-card__icon pillar-card__icon--green">🔒</div>
+        <h3>Private by design</h3>
+        <p>Every entry is AES-256-GCM encrypted on your device. Not on our servers — on yours. Your words never leave your phone.</p>
+      </div>
+      <div class="pillar-card fade-up fade-up-delay-1">
+        <div class="pillar-card__icon pillar-card__icon--gold">📖</div>
+        <h3>Beautiful journals</h3>
+        <p>Organise entries into book-style journals with a stunning page-flip view. Ruled, dotted, grid, or blank — your choice.</p>
+      </div>
+      <div class="pillar-card fade-up fade-up-delay-2">
+        <div class="pillar-card__icon pillar-card__icon--blue">🌐</div>
+        <h3>Share &amp; collaborate</h3>
+        <p>Invite others to co-edit shared notes in real time. Live cursors, instant sync, up to 10 simultaneous editors.</p>
+      </div>
+      <div class="pillar-card fade-up fade-up-delay-3">
+        <div class="pillar-card__icon pillar-card__icon--rose">🎙️</div>
+        <h3>Rich expression</h3>
+        <p>Record voice notes, embed GIFs and stickers, format with 5 typefaces, and customise every page's background and texture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECURITY SECTION (dark background)
+════════════════════════════════════════════════════════════════ -->
+<section class="security" id="security">
+  <div class="container">
+    <div class="feature-row">
+      <!-- Text -->
+      <div class="feature-row__text fade-up">
+        <span class="section-label">Security &amp; Privacy</span>
+        <h2 class="section-title">Your diary. Your keys. Your rules.</h2>
+        <p class="section-sub">
+          Hush was built with the assumption that your private thoughts should stay private.
+          Every note is encrypted before it touches storage — no server, no sync, no exposure.
+        </p>
+        <ul class="feature-list">
+          <li>AES-256-GCM encryption per entry, on-device</li>
+          <li>Biometric unlock — Face ID &amp; fingerprint</li>
+          <li>PIN protection with custom lock timeout</li>
+          <li>Offline-first — works with no internet, forever</li>
+          <li>Encrypted export backup — take your data anywhere</li>
+          <li>Zero tracking, zero analytics, zero ads</li>
+        </ul>
+      </div>
+
+      <!-- Phone -->
+      <div class="feature-row__visual fade-up fade-up-delay-2">
+        <div class="phone phone--lg">
+          <div class="phone-screen">
+            <img src="assets/ss_lock.jpg" alt="Hush biometric lock screen" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security cards -->
+    <div class="security-cards">
+      <div class="security-card fade-up">
+        <div class="security-card__icon">🔐</div>
+        <h3>On-device only</h3>
+        <p>Private diary entries are AES-256-GCM encrypted locally. The encryption key never leaves your phone.</p>
+      </div>
+      <div class="security-card fade-up fade-up-delay-1">
+        <div class="security-card__icon">🫆</div>
+        <h3>Biometric + PIN</h3>
+        <p>Unlock with your fingerprint, face, or a custom PIN. Auto-locks after a configurable timeout.</p>
+      </div>
+      <div class="security-card fade-up fade-up-delay-2">
+        <div class="security-card__icon">📦</div>
+        <h3>Encrypted export</h3>
+        <p>Export your entire diary as an encrypted ZIP backup. Import it on any device — your data, portable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     WRITING / EDITOR SECTION
+════════════════════════════════════════════════════════════════ -->
+<section class="writing" id="writing">
+  <div class="container">
+    <div class="feature-row feature-row--reverse">
+      <!-- Phone -->
+      <div class="feature-row__visual fade-up">
+        <div style="position:relative; display:flex; gap:20px; align-items:flex-start; justify-content:center;">
+          <div class="phone">
+            <div class="phone-screen">
+              <img src="assets/ss_editor.jpg" alt="Hush rich text editor with toolbar" loading="lazy" />
+            </div>
+          </div>
+          <div class="phone phone--sm" style="margin-top:48px; transform:rotate(3deg);">
+            <div class="phone-screen">
+              <img src="assets/ss_insert.jpg" alt="Hush insert sheet — voice, sticker, GIF, font, background" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="feature-row__text fade-up fade-up-delay-1">
+        <span class="section-label">The Editor</span>
+        <h2 class="section-title">Write the way you think</h2>
+        <p class="section-sub">
+          A distraction-free editor with the richness of a desktop app. Format deeply, or write plainly —
+          Hush adapts to how your thoughts flow.
+        </p>
+        <ul class="feature-list">
+          <li>Rich text — bold, italic, headings, lists, quotes</li>
+          <li>5 typefaces: Merriweather, DM Serif, Caveat, Lato, DM Sans</li>
+          <li>Page textures: ruled, dotted, grid, or blank</li>
+          <li>Voice notes — record audio inline, play back in-note</li>
+          <li>Embed emoji, stickers, and GIFs mid-entry</li>
+          <li>800ms debounce auto-save — never lose a word</li>
+          <li>Word count, reading time, writing streak tracker</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     JOURNALS SECTION
+════════════════════════════════════════════════════════════════ -->
+<section class="journals" id="journals">
+  <div class="container">
+    <div class="feature-row">
+      <!-- Text -->
+      <div class="feature-row__text fade-up">
+        <span class="section-label">Journals</span>
+        <h2 class="section-title">Your life, beautifully organised</h2>
+        <p class="section-sub">
+          Group entries into personal journals — each one a book. Flip through pages, find any entry
+          in seconds, and keep chapters of your life neatly separated.
+        </p>
+        <ul class="feature-list">
+          <li>Create unlimited journals with custom names</li>
+          <li>Book-style page-flip view — swipe through entries</li>
+          <li>Sort by last edited, created date, or A–Z</li>
+          <li>PIN-lock individual journals for extra privacy</li>
+          <li>Full-text search across all entries and journals</li>
+          <li>Activity heatmap — see your writing streak at a glance</li>
+        </ul>
+      </div>
+
+      <!-- Two phones clustered -->
+      <div class="feature-row__visual fade-up fade-up-delay-1">
+        <div class="journals__phone-cluster">
+          <div class="phone">
+            <div class="phone-screen">
+              <img src="assets/ss_journals.jpg" alt="Hush journals grid view" loading="lazy" />
+            </div>
+          </div>
+          <div class="phone phone--sm">
+            <div class="phone-screen">
+              <img src="assets/ss_entry_1.jpg" alt="Hush journal book view — April 1 entry" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     THEMES & CUSTOMISATION SECTION
+════════════════════════════════════════════════════════════════ -->
+<section class="themes" id="themes">
+  <div class="container">
+    <div class="feature-row feature-row--reverse">
+      <!-- Phone -->
+      <div class="feature-row__visual fade-up">
+        <div class="phone phone--lg">
+          <div class="phone-screen">
+            <img src="assets/ss_settings.jpg" alt="Hush themes and backgrounds settings" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="feature-row__text fade-up fade-up-delay-1">
+        <span class="section-label">Themes &amp; Backgrounds</span>
+        <h2 class="section-title">Make it feel like yours</h2>
+        <p class="section-sub">
+          Hush is a canvas. Choose a theme that matches your mood, pick a background from the curated
+          palette, or use your own photo from the gallery.
+        </p>
+        <ul class="feature-list">
+          <li>4 app themes: Hush, Midnight, Forest, Ocean</li>
+          <li>11 background presets: Parchment, Sakura, Dusk, Mint, Noir &amp; more</li>
+          <li>Custom gallery photo as note background</li>
+          <li>Per-note background overrides</li>
+          <li>Page line styles: None, Ruled, Dotted, Grid</li>
+          <li>Full dark mode with one tap</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREENSHOT GALLERY
+════════════════════════════════════════════════════════════════ -->
+<section class="gallery" id="gallery">
+  <div class="gallery__header container">
+    <span class="section-label" style="display:block; text-align:center;">See it in action</span>
+    <h2 class="section-title" style="text-align:center;">Every screen, crafted with care</h2>
+    <p class="section-sub" style="text-align:center; margin:0 auto;">Drag or swipe to explore the app.</p>
+  </div>
+
+  <div class="gallery__track">
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_lock.jpg" alt="Lock screen" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Lock Screen</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_entries.jpg" alt="All entries" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">All Entries</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_entries_dark.jpg" alt="All entries dark mode" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Dark Mode</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_journals.jpg" alt="Journals" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Journals</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_book_cover.jpg" alt="Book view cover" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Book View</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_entry_2.jpg" alt="Journal entry — April 2" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Journal Entry</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_entry_3.jpg" alt="Journal entry — April 3" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Reading View</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_editor.jpg" alt="Rich text editor" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Rich Editor</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_insert.jpg" alt="Insert tools — voice, sticker, GIF" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Insert Tools</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_shared.jpg" alt="Shared notes list" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Shared Notes</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_shared_invite.jpg" alt="Invite to collaborate" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Invites</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_shared_editor.jpg" alt="Shared note editor — live collaboration" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Collaboration</span>
+    </div>
+    <div class="gallery__item">
+      <div class="phone">
+        <div class="phone-screen">
+          <img src="assets/ss_settings.jpg" alt="Themes and settings" loading="lazy" />
+        </div>
+      </div>
+      <span class="gallery__caption">Themes</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SHARED NOTES / COLLABORATION SECTION
+════════════════════════════════════════════════════════════════ -->
+<section class="collab" id="collab">
+  <div class="container">
+    <div class="feature-row">
+      <!-- Text -->
+      <div class="feature-row__text fade-up">
+        <span class="section-label">Shared Notes</span>
+        <h2 class="section-title" style="color:#fff;">Write together, privately</h2>
+        <p class="section-sub">
+          Some thoughts are better shared. Hush's shared notes let you co-write in real time —
+          with full control over who sees what.
+        </p>
+        <ul class="collab__list">
+          <li><span class="collab__dot"></span>Invite collaborators by email — Accept or Decline from the Invites screen</li>
+          <li><span class="collab__dot"></span>Set permission per person — Can edit or View only</li>
+          <li><span class="collab__dot"></span>Real-time delta sync — see changes as they're typed</li>
+          <li><span class="collab__dot"></span>Live presence — coloured dots show who's editing</li>
+          <li><span class="collab__dot"></span>Up to 10 simultaneous co-editors per note</li>
+          <li><span class="collab__dot"></span>Offline fallback — edits save locally, sync on reconnect</li>
+          <li><span class="collab__dot"></span>Google Sign-In required only for shared notes — your diary stays private</li>
+        </ul>
+      </div>
+
+      <!-- Three phones: list, editor, invites -->
+      <div class="collab__visual fade-up fade-up-delay-1">
+        <div style="position:relative; display:flex; gap:16px; align-items:flex-start; justify-content:center; flex-wrap:wrap;">
+          <div class="phone" style="flex-shrink:0;">
+            <div class="phone-screen">
+              <img src="assets/ss_shared.jpg" alt="Hush shared notes list" loading="lazy" />
+            </div>
+          </div>
+          <div class="phone phone--sm" style="margin-top:40px; transform:rotate(3deg); flex-shrink:0;">
+            <div class="phone-screen">
+              <img src="assets/ss_shared_invite.jpg" alt="Hush invite to collaborate" loading="lazy" />
+            </div>
+          </div>
+          <div class="phone phone--sm" style="margin-top:80px; transform:rotate(-2deg); flex-shrink:0;">
+            <div class="phone-screen">
+              <img src="assets/ss_shared_editor.jpg" alt="Hush shared note editor" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     DOWNLOAD CTA
+════════════════════════════════════════════════════════════════ -->
+<section class="download" id="download">
+  <div class="container">
+    <div class="download__inner">
+      <span class="eyebrow" style="display:block; text-align:center;">Free Download</span>
+      <h2 class="download__title">Ready to start writing?</h2>
+      <p class="download__sub">
+        Hush is completely free. No subscription, no ads, no data harvesting.
+        Download the APK, install it, and your private space is ready in under a minute.
+      </p>
+
+      <div class="download__cta">
+        <a href="downloads/hush-v1.0.0.apk" class="btn btn--primary btn--large js-download" download>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+          Download hush-v1.0.0.apk
+        </a>
+        <p class="download__meta">Android 5.0+ &nbsp;·&nbsp; ~30 MB &nbsp;·&nbsp; No account needed to start</p>
+      </div>
+
+      <div class="download__steps">
+        <div class="download-step fade-up">
+          <div class="download-step__num">1</div>
+          <p>Tap Download and save the APK to your phone</p>
+        </div>
+        <div class="download-step fade-up fade-up-delay-1">
+          <div class="download-step__num">2</div>
+          <p>Open the file and allow "Install from unknown sources" if prompted</p>
+        </div>
+        <div class="download-step fade-up fade-up-delay-2">
+          <div class="download-step__num">3</div>
+          <p>Launch Hush and start writing — your diary is ready instantly</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+
+      <!-- Brand -->
+      <div>
+        <div class="footer__brand-logo">
+          <img src="assets/logo.jpg" alt="Hush" />
+          Hush
+        </div>
+        <p class="footer__tagline">
+          Your private diary. Encrypted on-device, offline-first, and entirely yours.
+          Write without walls.
+        </p>
+      </div>
+
+      <!-- App links -->
+      <div>
+        <p class="footer__col-title">App</p>
+        <ul class="footer__links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#journals">Journals</a></li>
+          <li><a href="#gallery">Screenshots</a></li>
+          <li><a href="#download">Download APK</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <p class="footer__col-title">Legal &amp; Info</p>
+        <ul class="footer__links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="https://github.com/jjohnsamuel21/hush-personal-diary" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 Hush. All rights reserved.</p>
+      <p class="footer__note">
+        Made with <span class="footer__heart">♥</span> for people who write
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
