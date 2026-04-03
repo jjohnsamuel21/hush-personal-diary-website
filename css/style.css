@@ -543,17 +543,25 @@ section.section--lg { padding: 128px 0; }
 
 /* ── Security Section ──────────────────────────────────────── */
 .security {
-  background: var(--ink);
-  color: var(--cream);
+  background: #1C1C2E;
+  color: #F7F5F0;
 }
 
-.security .section-label { color: var(--gold); }
-.security .section-title { color: var(--cream); }
+/* Hardcoded — not var()-based — so these work in both light and dark mode */
+.security h1, .security h2, .security h3,
+.security p, .security span, .security li,
+.security .eyebrow,
+.security .section-title,
+.security .section-sub {
+  color: #F7F5F0;
+}
+
+.security .section-label { color: #C9A557; }
 .security .section-sub   { color: rgba(247,245,240,0.7); }
 .security .feature-list li { color: rgba(247,245,240,0.75); }
 .security .feature-list li::before {
   background: rgba(201,165,87,0.15);
-  color: var(--gold);
+  color: #C9A557;
 }
 
 .security-cards {
@@ -578,7 +586,7 @@ section.section--lg { padding: 128px 0; }
 .security-card h3 {
   font-family: var(--font-serif);
   font-size: 1.05rem;
-  color: var(--cream);
+  color: #F7F5F0;
   margin-bottom: 8px;
 }
 
@@ -662,16 +670,24 @@ section.section--lg { padding: 128px 0; }
 
 /* ── Shared / Collab Section ───────────────────────────────── */
 .collab {
-  background: var(--sage-dark);
-  color: var(--cream);
+  background: #2E4A2A;
+  color: #fff;
 }
 
 [data-theme="dark"] .collab {
   background: var(--sage-pale);
 }
 
-.collab .section-label { color: var(--gold); }
-.collab .section-title { color: #fff; }
+/* Hardcoded — not var()-based — so these work in both light and dark mode */
+.collab h1, .collab h2, .collab h3,
+.collab p, .collab span, .collab li,
+.collab .eyebrow,
+.collab .section-title,
+.collab .section-sub {
+  color: #fff;
+}
+
+.collab .section-label { color: #C9A557; }
 .collab .section-sub   { color: rgba(255,255,255,0.75); }
 
 .collab__list {
