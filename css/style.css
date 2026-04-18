@@ -957,7 +957,30 @@ section.section--lg { padding: 128px 0; }
   .pillars__grid { grid-template-columns: 1fr; }
   .phone { width: 220px; }
   .phone--lg { width: 240px; }
-  .trust-bar__inner { gap: 20px; }
+  .trust-bar__inner { gap: 20px; flex-wrap: wrap; justify-content: center; }
   .download__steps { flex-direction: column; align-items: center; }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
+
+  /* Prevent fixed-width clusters from overflowing narrow screens */
+  .journals__phone-cluster {
+    width: min(260px, 80vw);
+    height: auto;
+    min-height: 340px;
+  }
+
+  /* Gallery inner padding — prevent track from extending past viewport */
+  .gallery__track { padding: 20px 16px 32px; }
+
+  /* Nav: ensure the logo/actions row doesn't overflow */
+  .nav__inner { gap: 8px; }
+
+  /* Hero actions stacking on very narrow */
+  .hero__actions { flex-wrap: wrap; gap: 12px; }
+}
+
+/* ── Global safety net — prevent ANY element from causing horizontal scroll ── */
+@media (max-width: 768px) {
+  * { max-width: 100%; box-sizing: border-box; }
+  /* Re-allow elements that intentionally use wider layout */
+  body, html, .gallery, .gallery__track, .hero, .hero__blob { max-width: unset; }
 }
