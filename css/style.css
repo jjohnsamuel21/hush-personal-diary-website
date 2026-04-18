@@ -145,6 +145,8 @@ section.section--lg { padding: 128px 0; }
   height: var(--nav-h);
   display: flex;
   align-items: center;
+  /* Prevent the nav itself from ever creating horizontal scroll */
+  overflow: hidden;
   transition: background 0.3s var(--ease), box-shadow 0.3s var(--ease), backdrop-filter 0.3s;
 }
 
@@ -164,6 +166,8 @@ section.section--lg { padding: 128px 0; }
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  /* Ensure the inner bar never bleeds past the nav */
+  min-width: 0;
 }
 
 .nav__logo {
@@ -951,9 +955,31 @@ section.section--lg { padding: 128px 0; }
   .footer__inner { grid-template-columns: 1fr; gap: 32px; }
 }
 
+@media (max-width: 768px) {
+  /* ── Nav: collapse to logo + icon-only button ── */
+  .nav__links { display: none; }
+
+  .nav__inner {
+    gap: 0;
+    padding: 0 16px;
+  }
+
+  /* Button becomes icon-only: hide the text label, keep the download icon */
+  .nav__btn-text { display: none; }
+
+  .btn.btn--primary {
+    padding: 10px 12px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  /* Logo: keep image visible, hide the "Hush" wordmark to save space */
+  .nav__logo { gap: 0; }
+  .nav__logo-text { display: none; }
+}
+
 @media (max-width: 640px) {
   section { padding: 64px 0; }
-  .nav__links { display: none; }
   .pillars__grid { grid-template-columns: 1fr; }
   .phone { width: 220px; }
   .phone--lg { width: 240px; }
@@ -971,16 +997,14 @@ section.section--lg { padding: 128px 0; }
   /* Gallery inner padding — prevent track from extending past viewport */
   .gallery__track { padding: 20px 16px 32px; }
 
-  /* Nav: ensure the logo/actions row doesn't overflow */
-  .nav__inner { gap: 8px; }
-
   /* Hero actions stacking on very narrow */
   .hero__actions { flex-wrap: wrap; gap: 12px; }
 }
 
-/* ── Global safety net — prevent ANY element from causing horizontal scroll ── */
+/* ── Global safety net — prevent ANY element causing horizontal scroll ── */
 @media (max-width: 768px) {
-  * { max-width: 100%; box-sizing: border-box; }
-  /* Re-allow elements that intentionally use wider layout */
-  body, html, .gallery, .gallery__track, .hero, .hero__blob { max-width: unset; }
+  html, body { overflow-x: hidden; max-width: 100vw; }
+
+  /* Every element clips to the viewport — override only where needed */
+  .container { padding-left: 16px; padding-right: 16px; }
 }
