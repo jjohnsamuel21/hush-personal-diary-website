@@ -101,6 +101,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 /* ── APK download counter (UI feedback) ─────────────────────── */
 document.querySelectorAll('.js-download').forEach(btn => {
   btn.addEventListener('click', () => {
+    // Vercel Web Analytics custom event
+    if (window.va) window.va('event', { name: 'apk_download' });
+    
     const original = btn.innerHTML;
     btn.innerHTML = '✓ Download started';
     btn.style.background = '#2E4A2A';
