@@ -98,12 +98,22 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* ── APK download counter (UI feedback) ─────────────────────── */
+/* ── APK download tracking ───────────────────────────────────── */
+// Fires a GA4 custom event on every download button click.
+// The event shows up in GA4 → Reports → Events as "apk_download".
+// "button_location" lets you see which button (nav vs hero vs bottom CTA) converts best.
 document.querySelectorAll('.js-download').forEach(btn => {
   btn.addEventListener('click', () => {
-    // Vercel Web Analytics custom event
-    if (window.va) window.va('event', { name: 'apk_download' });
-    
+    // Google Analytics 4 custom event
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'apk_download', {
+        button_location: btn.closest('nav') ? 'navbar'
+          : btn.closest('.hero')           ? 'hero'
+          : 'cta_section',
+      });
+    }
+
+    // Visual feedback — button flashes green for 3 s
     const original = btn.innerHTML;
     btn.innerHTML = '✓ Download started';
     btn.style.background = '#2E4A2A';
